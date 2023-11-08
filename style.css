@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: darkgrey;
+}
+
+section .runway {
+  position: relative;
+  width: 400px;
+  height: 100vh;
+  background: black;
+  border-left: 20px solid white;
+  border-right: 20px solid white;
+  
+}
+
+section .runway::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 100%;
+  background: lightyellow;
+  background: repeating-linear-gradient(transparent 0%, transparent 50%, lightyellow 50%, lightyellow 100%);
+  background-size: 20px 320px;
+  animation: animaterunway 0.5s linear infinite;
+
+}
+@keyframes animaterunway {
+  0%
+  {
+    background-poisition-y: 0px;
+  }
+  100%
+  {
+    background-position-y: 320px;
+  }
+}
+
+.runwayjet {
+  height: auto;
+  width: 475px;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+}
+
+
